@@ -3,9 +3,11 @@
     <div class="panel-heading"><h3>My Contacts</h3></div>
     <div class="panel-body">
       <% @contacts.each do |contact| %>
-        Name: <%= contact.name %> <br>
-        Phone: <%= contact.cellphone %> <br>
+      <div class="contact<%= contact.id %>">
+        <span class="name<%= contact.id %>">Name: <%= contact.name %></span> <br>
+        <span class="phone<%= contact.id %>">Phone: <%= contact.cellphone %>
         <hr>
+      </div>
       <% end %>
     </div>
   </div>
