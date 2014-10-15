@@ -10,6 +10,12 @@ App.Contact.Views = function(){
   }
 
   this.throwError = function(){
-    console.log('Houston We have a problem')
+    var source    = $('#contact-error-template').html()
+    var template  = Handlebars.compile(source)
+    this.renderContactError(template)
+  }
+
+  this.renderContactError = function(template){
+    $('#addNewContact').prepend(template)   
   }
 }

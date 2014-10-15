@@ -28,6 +28,6 @@ App.Contact.Controller = function(view){
   }
 
   this.createNewContact = function(){
-    console.log('Creating new Contact')
+
   }
 }
