@@ -1,17 +1,14 @@
 class ContactsController < ApplicationController
-  before_action :set_contact, only: [:show, :edit, :update, :destroy]
+  before_action :set_contact, only: [:edit, :update, :destroy]
   # GET /contacts
   def index
     @contacts = Contact.all
   end
 
-  # GET /contacts/:id
-  def show
+  # POST /contacts
+  def create
+    @contact = Contact.new(contact_params)
     render json: @contact
-  end
-
-  # GET /contacts/new
-  def new
   end
 
   # GET /contacts/:id/edit
