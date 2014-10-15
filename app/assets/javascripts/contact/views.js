@@ -18,4 +18,8 @@ App.Contact.Views = function(){
   this.renderContactError = function(template){
     $('#addNewContact').prepend(template)   
   }
+
+  this.newContactTemplate = function(contact){
+    console.log('Contact Template')
+  }
 }

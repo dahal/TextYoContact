@@ -5,9 +5,14 @@ class ContactsController < ApplicationController
     @contacts = Contact.all
   end
 
+  # GET /contacts
+  def new
+    @contact = Contact.new
+  end
+
   # POST /contacts
   def create
-    @contact = Contact.new(contact_params)
+    @contact = Contact.create(name: params[:name], cellphone: params[:cellphone])
     render json: @contact
   end
 
@@ -27,10 +32,5 @@ class ContactsController < ApplicationController
     # Set contact to be avalilable to multiple different routes
     def set_contact
       @contact = Contact.find(params[:id])
-    end
-
-    # White listing params for security reason.
-    def contact_params
-      params.require(:contact).permit(:name, :cellphone)
     end
   end

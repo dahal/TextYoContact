@@ -28,6 +28,12 @@ App.Contact.Controller = function(view){
   }
 
   this.createNewContact = function(){
-
+    $.ajax({
+      url: '/contacts/create',
+      type: 'POST',
+      data: {name: this.view.getName(), cellphone: this.view.getCellPhone()}
+    }).done(function(contact){
+      this.view.newContactTemplate(contact)
+    }.bind(this))
   }
 }
