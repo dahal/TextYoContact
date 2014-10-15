@@ -10,4 +10,12 @@ App.Message.Views = function(){
     $('#inputPhone').val('')
     $('#inputMessage').val('')
   }
+
+  this.getPhone = function(){
+    return $('#inputPhone').val()
+  }
+
+  this.getMessage = function(){
+    return $('#inputMessage').val()
+  }
 }
