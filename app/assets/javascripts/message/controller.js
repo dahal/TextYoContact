@@ -9,14 +9,14 @@ App.Message.Controller = function(views){
 
   this.bindTextButton = function(){
     $('.textButton').click(function(e){
-      console.log('Text Button Clicked')
-    })
+      this.views.autoFillCellphone(e)
+    }.bind(this))
   }
 
   this.bindClearButton = function(){
     $('#clearButton').click(function(e){
       e.preventDefault()
-      console.log('Clear Button Clicked')
-    })
+      this.views.clearInputFields()
+    }.bind(this))
   }
 }
