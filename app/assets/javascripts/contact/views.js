@@ -20,6 +20,17 @@ App.Contact.Views = function(){
   }
 
   this.newContactTemplate = function(contact){
-    console.log('Contact Template')
+    var source            = $('#new-contact-template').html()
+    var content           = { contactId: contact.id,
+                              contactName: contact.name,
+                              contactPhone: contact.cellphone
+                            }
+    var template          = Handlebars.compile(source)
+    var contactDetails    = template(content)
+    this.renderNewContact(contactDetails)
+  }
+
+  this.renderNewContact = function(contact){
+    $('.contacts').prepend(contact)
   }
 }
