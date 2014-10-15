@@ -5,9 +5,9 @@ class SendHubController < ApplicationController
     @sendhub = SendHub.new(api_key, phone_number)
     @sendhub.post_messages(@details)
     if response.status == 200
-      render json: {message: "Message Successfully Sent!"}
+      render json: {"success"=> "Message Successfully Sent!"}.to_json
     else
-      render json: {message: "Snap! there is an error!"}
+      render json: {"error"=> "Snap! there is an error!"}.to_json
     end
   end
 

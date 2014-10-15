@@ -19,11 +19,17 @@ App.Message.Views = function(){
     return $('#inputMessage').val()
   }
 
-  this.renderResponse = function(response){
-    alert(response.message)
+  this.renderErrorMessage = function(){
+    var source    = $('#contact-error-template').html()
+    var template  = Handlebars.compile(source)
+    $('fieldset').append(template)
   }
 
-  this.cantBeBlankError = function(){
-    alert('Fields cannot be blank!')
+  this.renderResponse = function(response){
+    // Todo:- Check to see if the response is success or error, and render success / error accordingly
+    var source    = $('#contact-success-template').html()
+    var template  = Handlebars.compile(source)
+    $('fieldset').append(template)  
   }
+
 }

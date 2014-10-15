@@ -29,8 +29,9 @@ App.Message.Controller = function(views){
   }
 
   this.checkIfBlank = function(){
-    if(this.views.getPhone() == "" || this.views.getMessage == ""){
-      this.views.cantBeBlankError()
+    // debugger
+    if(this.views.getPhone() === "" || this.views.getMessage === ""){
+      this.views.renderErrorMessage()
     } else {
       this.sendAjaxCall()
     }
