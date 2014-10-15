@@ -5,3 +5,32 @@
 .addnew{
   padding-top: 10px;
 }
+
+.fa{
+  border: none;
+  background-color: transparent;;
+}
+
+.textButton{
+  color: #7f8c8d;
+}
+
+.editButton{
+  color: #7f8c8d;
+}
+
+.deleteButton{
+  color: #7f8c8d;
+}
+
+.textButton:hover { 
+  color: #1abc9c;
+}
+
+.editButton:hover{
+  color: #34495e;
+}
+
+.deleteButton:hover{
+  color: #e74c3c;
+}

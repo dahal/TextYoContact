@@ -1,7 +1,10 @@
 <script id="new-contact-template" type="text/x-handlebars-template">
   <div class="contact{{contactId}}">
-    <span class="name{{contactId}}">Name: {{contactName}}</span> <br>
-    <span class="phone{{contactId}}">Phone: {{contactPhone}}
+    <span class="name{{contactId}}">{{contactName}}</span> <br>
+    <span class="phone{{contactId}}">{{contactPhone}} <br>
+    <button class="textButton fa fa-comments fa-lg"></button>
+    <button class="editButton fa fa-pencil-square fa-lg"></button>
+    <button class="deleteButton fa fa-trash fa-lg"></button>
       <hr>
     </span>
   </div>
