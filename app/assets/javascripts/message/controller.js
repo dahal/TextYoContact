@@ -24,8 +24,16 @@ App.Message.Controller = function(views){
   this.bindSendButton = function(){
     $('#sendButton').click(function(e){
       e.preventDefault()
-      this.sendAjaxCall()
+      this.checkIfBlank()
     }.bind(this))
+  }
+
+  this.checkIfBlank = function(){
+    if(this.views.getPhone() == "" || this.views.getMessage == ""){
+      this.views.cantBeBlankError()
+    } else {
+      this.sendAjaxCall()
+    }
   }
 
   this.sendAjaxCall = function(){
@@ -35,8 +43,7 @@ App.Message.Controller = function(views){
       type: 'POST',
       data: {contacts: [this.views.getPhone()], text: this.views.getMessage()}
     }).done(function(response){
-      console.log('-------------------------------')
-      console.log(response)
+      this.views.renderResponse(response)
     }.bind(this))
   }
 }

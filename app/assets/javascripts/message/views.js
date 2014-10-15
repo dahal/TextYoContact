@@ -18,4 +18,12 @@ App.Message.Views = function(){
   this.getMessage = function(){
     return $('#inputMessage').val()
   }
+
+  this.renderResponse = function(response){
+    alert(response.message)
+  }
+
+  this.cantBeBlankError = function(){
+    alert('Fields cannot be blank!')
+  }
 }
