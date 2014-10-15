@@ -1,4 +1,4 @@
-10.times do
+1.times do
   name  = Faker::Name.name
   phone = Faker::PhoneNumber.cell_phone
   Contact.create(name: name, cellphone: phone)

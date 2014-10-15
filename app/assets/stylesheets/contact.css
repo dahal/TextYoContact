@@ -6,20 +6,9 @@
   padding-top: 10px;
 }
 
-.fa{
+.textButton{
   border: none;
   background-color: transparent;;
-}
-
-.textButton{
-  color: #7f8c8d;
-}
-
-.editButton{
-  color: #7f8c8d;
-}
-
-.deleteButton{
   color: #7f8c8d;
 }
 
@@ -27,10 +16,6 @@
   color: #1abc9c;
 }
 
-.editButton:hover{
-  color: #34495e;
-}
-
-.deleteButton:hover{
-  color: #e74c3c;
+.text-form{
+  padding-left: 50px;
 }
